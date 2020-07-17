@@ -1,7 +1,27 @@
-<nav class="app-header layout-row align-items-center justify-content-center">
+<!-- <nav class="app-header layout-row align-items-center justify-content-center">
   <div class="layout-row align-items-center">
     <img src="assets/images/logo.svg" class="logo">
     <h4 id="app-title" class="app-title">Customer List</h4>
   </div>
 </nav>
-<router-outlet></router-outlet>
+<router-outlet></router-outlet> -->
+
+<nav style="margin: 10px 10%;">
+  <a routerLink="/practice"  routerLinkActive="active">WalMart Practice Qus</a> <span style="margin-left:2%"></span>
+  <a href="#">Binary Search</a> <span style="margin-left:2%"></span>
+  <a routerLink="/stateManage" routerLinkActive="active">State Management</a>
+</nav>
+
+
+<div style="padding: 2% 10%;">
+
+  <router-outlet></router-outlet>
+
+ <!-- <app-string-permutation></app-string-permutation> -->
+  
+  <!-- Walmart Question and Answers -->
+  <!-- <app-pra1></app-pra1> -->
+
+  <!-- <app-binary-search-tree></app-binary-search-tree> -->
+
+</div>

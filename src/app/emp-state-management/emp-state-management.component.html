@@ -1,0 +1,9 @@
+<p>Statement Management!</p>
+<input type="text" [(ngModel)]="tbox">
+<button (click)="insertData(tbox)" type="submit">Add Name</button>
+<hr>
+<ul>
+    <li *ngFor="let v of emp | async"> {{v.employee_name}}  <button (click)="removeName(v.name)">Remove</button> </li>
+</ul>
+
+

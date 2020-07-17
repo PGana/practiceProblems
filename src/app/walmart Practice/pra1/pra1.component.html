@@ -1,0 +1,162 @@
+<p>Practice</p>
+
+<h4> Finding larget subString between two strings </h4>
+<h5 style="color: gray;">Ex: s1 =javaCore, s2=BeginnnerjavaScript // Output - java</h5>
+<h5>Input :  var a = "sqltutorialapl"; b = "javatutorialcpl"  </h5>
+<h5> OutPut : {{findingLargestSubString()}}</h5>
+<hr>  
+<!-- ------------------------------------------------------------------- -->
+
+
+
+<h4> Removing multiple spaces in b/w string </h4>
+<h5>Input : var input = 'Country  name     is     India';  </h5>
+<h5> OutPut : Sum pair - {{onRemoveWhiteSpace()}}</h5>
+<hr>  
+<!-- ------------------------------------------------------------------- -->
+
+
+<h4> Separate characters and numbers from given string </h4>
+<h5 style="color: gray;">Ex : input =123abc //output num =123, string =abc</h5>
+<h5>Input : var input = "1a2b3c4defgh567jklmnopqrst89uwxyz0";  </h5>
+<h5> OutPut : Sum pair - {{onSeparateCharNums() | json}}</h5>
+<hr>  
+<!-- ------------------------------------------------------------------- -->
+
+
+<h4> Finding the pairs where pair sum = given input</h4>
+<h5 style="color: gray;">Ex : array = [1,3,2,5], Input= 9 //output [], Input = 4 //ouput [1,3], input =7 //output [2,5]</h5>
+<h5>Input : var a = [1, 2, 1, 3, 5, 8, 2, 2]; var input = 4  </h5>
+<h5> OutPut : Sum pair - {{findSumPair(4)}}</h5>
+<hr>  
+<!-- ------------------------------------------------------------------- -->
+
+
+
+<h4> Finding closest pair and pair sum = closest given input</h4>
+<h5 style="color: gray;">Ex : array = [1,3,2,5], Input= 9 //output [2,5], Input = 4 //ouput [1,3]</h5>
+<h5>Input : var a = [1, 2, 3, 4, 5, 8]; var input = 9  </h5>
+<h5> OutPut : Closest pair - {{findClosestSumPair(9)}}</h5>
+<hr> 
+<!-- ------------------------------------------------------------------- -->
+
+<h4> Find the Common exists numbers in the given Arrays</h4>
+<h5 style="color: gray;">Ex : a1 = [1,2,3], a2=[3,2], a3=[5,6,4,2,3] // Output = 2,3</h5>
+<h5>Input : var a = [5, 2, 1]; var b = [2, 3, 5, 6, 1]; var c = [1, 2, 4, 7, 8, 3];  </h5>
+<h5> OutPut : Commom Number b/w 3 arrays are - {{findExistCommonNumbers() | json}}</h5>
+<hr>
+
+<!-- ------------------------------------------------------------------- -->
+
+
+<h4> Finding first min number of time repeated character in given string</h4>
+<h5>Input : analogy  </h5>
+<h5> OutPut : {{FindMinOccuranceOfChar('analogy') | json}}</h5>
+<hr>
+
+<!-- ------------------------------------------------------------------- -->
+
+<h4> Permutations - Using String</h4>
+<h5>Input : ABC  </h5>
+<h5> OutPut : Total Permutations : {{permutationResult.length}} <br> - {{permutationResult | json}} </h5>
+<hr>
+
+<!-- ------------------------------------------------------------------- -->
+
+
+<h4> Validate Open/Clos Bracket Expression</h4>
+<h5>Input : <input type="text" value="[(){}]()[]">  </h5>
+<h5> OutPut : {{onValidateExpression('[{()}]()[]')}}</h5>
+<hr>
+
+<!-- ------------------------------------------------------------------- -->
+
+<h4> Reverse Setance into word wise</h4>
+<h5>Input : How are you! </h5>
+<h5> OutPut : {{onRevertheSentance('How are you!')}}</h5>
+<hr>
+
+<!-- ------------------------------------------------------------------- -->
+
+<h4> Finding Anagram - Check 2nd string consits of 1st string letters or not </h4>
+<h5 style="color: gray;">Anagram Explanation : Check whether we can form 1st string using 2nd string letters</h5>
+<h5>Input : ['cat', 'atc'] </h5>
+<h5> OutPut : {{findingAnagram(['hello', 'elloh'])}}</h5>
+<hr>
+
+<!-- ------------------------------------------------------------------- -->
+
+<h4>Sum of digits given in the Integer</h4>
+<h5 style="color: gray;">Example : input = 123 // ouput = (1+2+3) = 6 </h5>
+<h5>Input : 12453 </h5>
+<h5> OutPut : {{findSumOfDigits(12453)}}</h5>
+<hr>
+
+<!-- ------------------------------------------------------------------- -->
+
+
+<h4>Second Max Number <small>(*Without using sort)</small> </h4>
+<h5>Input : [0,2,3,1,3,8, 11, 02, 34, 50, 9, 16] </h5>
+<h5> OutPut : {{findSecondMaxNum([0,2,3,1,3,8, 11, 02, 34, 50, 9, 16])}}</h5>
+<hr>
+
+<!-- ------------------------------------------------------------------- -->
+
+
+<h4>Pow Calculation </h4>
+<h5 style="color: gray;"> Note :Formulas,<br> aPow-X = (1/aPowX), <br> aPow0 = 1</h5>
+<h5>Input :onPow(2,3) //OutPut : {{onPow(2,3)}}<br> Input :onPow(2,-3) //OutPut : {{onPow(2,-3)}}<br> Input :onPow(-2,3)
+    //OutPut : {{onPow(-2,3)}} </h5>
+<hr>
+
+<!-- ------------------------------------------------------------------- -->
+
+<h4>HasMap / Map Object </h4>
+<h5 style="color: gray;"> Note : Which holds the pair of values,<br> 1st one is the key, <br> 2nd v=one is the actual
+    value</h5>
+<h5>Input : First key1= [1,2,3] , key2 = [4,5]</h5>
+<h5> OutPut : {{onHashMap()| json}}</h5>
+<hr>
+
+<!-- ------------------------------------------------------------------- -->
+
+<h4>Merge Two Arrays</h4>
+<h5>Input : First Array [1,2] , Second Array [3,4]</h5>
+<h5> OutPut : {{onArrayMerge([1,2], [3,4]) | json}}</h5>
+<hr>
+
+<!-- ------------------------------------------------------------------- -->
+
+
+<h4>Compare Two Arrays - return indexes that are not matching</h4>
+<h5>Input : First Array {{fCompareAry|json}} , Second Array {{sCompareAry |json}}</h5>
+<h5> OutPut : {{onCompareArrays() | json}}</h5>
+<hr>
+
+<!-- ------------------------------------------------------------------- -->
+
+
+
+<h4>Mean Mode Median - Array</h4>
+<h5 style="color: gray;"> Formulas: <br>
+    Mean - (Sum of Total Numbers/ Count of Numbers) <br>
+    Median - 1. Sort Array in Asc Order , 2. Find potion of center (Array length / 2), 3. ouput - Array[postion] <br>
+    Mode - 1. loop array, 2. count number times each value occured using filter and store value, 3. Check previous value
+    to current value
+</h5>
+<h5>Input : {{meaModeMedianArray|json}}</h5>
+<h5> OutPut : {{onMeanModeMedianArray() | json}}</h5>
+<hr>
+
+<!-- ------------------------------------------------------------------- -->
+<h4>Min and Max - Array</h4>
+<h5>Input : {{minMaxArray|json}}</h5>
+<h5>Min Output : {{OnMinMaxArray() | json}}</h5>
+<hr>
+<!-- ------------------------------------------------------------------- -->
+
+<h4> Find Number of string instances and Index Value in a paragraph/sentance</h4>
+<label for="sentance">Sentance</label> <input type="text" #str name="" id="sentance"> <br>
+<label for="search">Value</label> &nbsp; <input type="text" name="" #val id="search"
+    (change)="OnStringIndexInstances(str.value, val.value)">
+<h5>OutPut : {{OnStringIndexInstances(str.value, val.value) | json}}</h5>
