@@ -6,18 +6,10 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./bst.component.scss']
 })
 export class BinarySearchTreeComponent implements OnInit {
-
-    data = [6, 4, 8, 3, 5, 7, 10];
     ngOnInit() { }
 
-    findInorderTraversal() {
-
+    printVal(){
+        console.log(this);
     }
-    OnDeleteNode() {
-
-    }
-
-    OnInsertNode(value: number) {
-
-    }
+   
 }

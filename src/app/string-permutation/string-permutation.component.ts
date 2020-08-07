@@ -9,7 +9,61 @@ export class StringPermutationComponent implements OnInit {
   ngOnInit() {}
 
 
-  /**
+/** Method 1: recommended method latest 
+/// This solution works for minimum 3 length; 
+var a = ['A', 'B', 'C', 'D'];
+var backup = a.slice();
+// Find total permulations for given string -1
+var per = totPer(a.length-1);
+var i, j;
+
+var res = [];
+console.log();
+for(i=0;i <a.length;i++){   
+  a = backup.slice();
+ 
+  if(i!==0){
+  [a[0],a[i]] = [a[i], a[0]]; 
+  }
+  
+  var cur = 1;
+  for(j=0;j<per;j++){   
+   
+    var next = cur+1;  
+    if(!a[next]){    
+      cur= 1;
+      next = cur+1;
+    }
+    
+    [a[cur],a[next]] = [a[next], a[cur]];
+    res.push(a.join());    
+    cur++;    
+  }
+}
+
+console.log(res);
+
+function totPer(len){
+  var res =1;
+  for(j=1;j<=len;j++){ 
+    res = j*res;
+  }
+  return res;
+}
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+  /** Methode 2
    * 
     var arr = ['A']; 
  var res = [];
