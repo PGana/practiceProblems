@@ -597,7 +597,7 @@ export class Pra1Component implements OnInit {
     }
     return res;
   }
-/// ......... END first min number of time repeated character ...........
+  /// ......... END first min number of time repeated character ...........
 
 
 
@@ -658,21 +658,21 @@ export class Pra1Component implements OnInit {
    */
   findClosestSumPair(input) {
     /// 1.  Finding closest pair and pair sum = given input
-    var a = [1, 2, 3, 4, 5, 8];  
+    var a = [1, 2, 3, 4, 5, 8];
     var index = 0;
     var close = input;
     for (var iIndex in a) {
-      var i= +iIndex;
+      var i = +iIndex;
       if (a[i + 1]) {
         var val = a[i] + a[i + 1];
         var dif = input - val;
         if (dif < close && dif >= 0) {
           close = dif;
-          index =i;
+          index = i;
         }
       }
     }
-    return '('+ a[index] +','+ a[index + 1] +')';
+    return '(' + a[index] + ',' + a[index + 1] + ')';
   }
   ////...................... End Finding closest pair
 
@@ -680,12 +680,12 @@ export class Pra1Component implements OnInit {
    * Finding the pairs and pair sum = given input
    * Ex : array = [1,3,2,5,2,2], Input= 9 //output [], Input = 4 //ouput [(1,3),(2,2)], input =7 //output [2,5]
    */
-    findSumPair(input) {
+  findSumPair(input) {
     var a = [1, 2, 1, 3, 5, 8, 2, 2];
     var index = 0;
     var result = [];
     for (var iIndex in a) {
-     var i=+iIndex;
+      var i = +iIndex;
       if (a[i + 1]) {
         var val = a[i] + a[i + 1];
         console.log(a[i]);
@@ -694,9 +694,9 @@ export class Pra1Component implements OnInit {
         }
       }
     }
-   return result;
+    return result;
   }
- ////...................... End Finding sum pair
+  ////...................... End Finding sum pair
 
 
   /** ------------------------------------------------
@@ -776,4 +776,67 @@ export class Pra1Component implements OnInit {
     }
     return result;
   }
+
+
+  /**
+   * Find Given number is Armstrong Number or not
+   * Ex : 153 = (1*1*1)+(5*5*5)+(3*3*3), 371 = (3*3*3)+(7*7*7)+(1*1*1)  these two are armstrong numbers
+   */
+  isArmStrongNo(num: number) {
+    var backup = num;
+    var res = 0;
+    while (num > 0) {
+      var last = num % 10;
+      var i = 3, temp = 1;
+      while (i > 0) {
+        temp *= last;
+        i--;
+      }
+      res += temp;
+      num = ~~(num / 10);
+    }
+    return backup === res;
+  }
+
+  /**----------------------------------------------------------------------
+   * Find maximum and minimum occurring character in a String
+   * @param str Any string
+   */
+  onFindMinMaxLetter(str: string) {
+    var res = [];
+    for (let i of str) {
+      if (i !== ' ') {
+        var count = 0;
+
+        for (let j of str) {
+          if (i === j) {
+            count++;
+          }
+        }
+
+        if (!res[0]) {
+          res.push({ ch: i, c: count });
+        }
+
+        if (res[0] && !res[1]) {
+          res.push({ ch: i, c: count });
+        }
+
+        if (res[0] && res[1]) {
+          if (res[0].c < count) {
+            res[0].ch = i;
+            res[0].c = count;
+          }
+
+          if (res[1].c > count) {
+            res[1].c = count;
+            res[1].ch = i;
+          }
+        }
+      }
+    }
+    return {max: {letter : res[0].ch, count:res[0].c}, min:{letter:res[1].ch, count:res[1].c}};
+  }
+/**.................. End Find min and max letter */
+
 }
